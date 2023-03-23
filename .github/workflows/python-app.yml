@@ -16,5 +16,10 @@ jobs:
   check-for-secrets:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
-      - uses: kams-mash/gh-secrets-scanner-action@master
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run Ludvig
+        uses: FrodeHus/ludvig-action@v0.2.6
+        with:
+          path: "src/"
+          level: "MEDIUM"
