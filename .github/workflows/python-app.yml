@@ -18,6 +18,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: gitleaks
-        uses: gitleaks/gitleaks-action@master
+      #- name: gitleaks
+      #  uses: gitleaks/gitleaks-action@master
         #uses: gitleaks/gitleaks-action@v2
+        
+      - name: Clone gitleaks/gitleaks-action
+        run: |
+          git clone https://github.com/gitleaks/gitleaks-action.git
+          cd gitleaks-action
+          git pull
+
+      - name: Scan for secrets using gitleaks
+        uses: ./gitleaks-action
+        with:
+          repo_path: "."
+          config_path: ".gitleaks.toml"
