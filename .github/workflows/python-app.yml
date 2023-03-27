@@ -21,13 +21,25 @@ jobs:
         #   token: ${{ secrets.MY_GITHUB_TOKEN }}
         #   path: ./.github/actions/Gitleaks-Minutus
 
-      - name: gitleaks scan
-        uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
+      - name: Clone gitleaks/gitleaks-action
+        run: |
+          git clone https://github.com/ChetanVaidya-Minutus/Gitleaks-Minutus.git
+          cd Gitleaks-Minutus
+          git pull
+
+      - name: Scan for secrets using gitleaks
+        uses: ./Gitleaks-Minutus
         with:
-          repository: ChetanVaidya-Minutus/Gitleaks-Minutus
-          ref: main
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
-          path: ./.github/actions/Gitleaks-Minutus
+          repo_path: "."
+          config_path: ".gitleaks.toml"
+
+      # - name: gitleaks scan
+      #   uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
+      #   with:
+      #     repository: ChetanVaidya-Minutus/Gitleaks-Minutus
+      #     ref: main
+      #     token: ${{ secrets.MY_GITHUB_TOKEN }}
+      #     path: ./.github/actions/Gitleaks-Minutus
         # with:
         #   repo_path: "."
         #   config_path: ".gitleaks.toml"
