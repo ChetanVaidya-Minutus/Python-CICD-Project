@@ -23,8 +23,6 @@ jobs:
           ref: main
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: ./.github/actions/Gitleaks-Minutus
-        env:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: gitleaks scan
         uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
@@ -33,5 +31,3 @@ jobs:
           ref: main
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-
-#
