@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
-          git clone https://github.com/ChetanVaidya-Minutus/Gitleaks-Minutus.git
+          git clone git@github.com:ChetanVaidya-Minutus/Gitleaks-Minutus.git
           cd Gitleaks-Minutus
           git pull
 
