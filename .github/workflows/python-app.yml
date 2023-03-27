@@ -26,5 +26,8 @@ jobs:
 
       - name: gitleaks scan
         uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
+        with:
+          repo_path: "."
+          config_path: ".gitleaks.toml"
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
