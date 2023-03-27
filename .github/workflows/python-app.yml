@@ -27,7 +27,6 @@ jobs:
         with:
           repo-url: https://github.com/ChetanVaidya-Minutus/Gitleaks-Minutus.git
           ref: main
-          args: --verbose
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
