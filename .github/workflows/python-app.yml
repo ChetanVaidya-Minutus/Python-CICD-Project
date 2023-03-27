@@ -26,8 +26,5 @@ jobs:
 
       - name: gitleaks scan
         uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
-        with:
-          repo-url: https://github.com/ChetanVaidya-Minutus/Gitleaks-Minutus.git
-          ref: main
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
