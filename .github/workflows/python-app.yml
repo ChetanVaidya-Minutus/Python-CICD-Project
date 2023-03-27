@@ -23,6 +23,11 @@ jobs:
 
       - name: gitleaks scan
         uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
+        with:
+          repository: ChetanVaidya-Minutus/Gitleaks-Minutus
+          ref: main
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+          path: ./.github/actions/Gitleaks-Minutus
         # with:
         #   repo_path: "."
         #   config_path: ".gitleaks.toml"
