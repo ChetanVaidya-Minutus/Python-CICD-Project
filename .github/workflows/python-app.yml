@@ -18,16 +18,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          repository: ChetanVaidya-Minutus/Gitleaks-Minutus
-          ref: main
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
-          path: ./.github/actions/Gitleaks-Minutus
+        # with:
+        #   repository: ChetanVaidya-Minutus/Gitleaks-Minutus
+        #   ref: main
+        #   token: ${{ secrets.MY_GITHUB_TOKEN }}
+        #   path: ./.github/actions/Gitleaks-Minutus
 
       - name: gitleaks scan
         uses: ChetanVaidya-Minutus/Gitleaks-Minutus@main
-        with:
-          repo_path: "."
-          config_path: ".gitleaks.toml"
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        # with:
+        #   repo_path: "."
+        #   config_path: ".gitleaks.toml"
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
