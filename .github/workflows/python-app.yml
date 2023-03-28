@@ -30,7 +30,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git clone git@github.com:ChetanVaidya-Minutus/Gitleaks-Minutus.git
+          sudo git clone git@github.com:ChetanVaidya-Minutus/Gitleaks-Minutus.git
           cd Gitleaks-Minutus
           git pull
 
@@ -52,3 +52,5 @@ jobs:
         #   config_path: ".gitleaks.toml"
         # env:
         #   GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+
+#
