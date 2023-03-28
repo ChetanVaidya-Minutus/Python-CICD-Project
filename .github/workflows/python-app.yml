@@ -30,7 +30,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          sudo git clone git@github.com:ChetanVaidya-Minutus/Gitleaks-Minutus.git
+          git clone git@github.com:ChetanVaidya-Minutus/Gitleaks-Minutus.git 
           cd Gitleaks-Minutus
           git pull
 
