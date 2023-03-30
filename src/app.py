@@ -1,6 +1,6 @@
 provider "aws" {
    region = var.region
-   secret = "kX9QNgkQZQZN9w.atlasv1.ryZpapzyEj1niFb9W5Vd3WYN3jPqzlYhqfpCSjjRmyQPWYvk5Sbth4ckIvX3BGByLms"
+   api_secret = "kX9QNgkQZQZN9w.atlasv1.ryZpapzyEj"
 }
 
 from flask import Flask
