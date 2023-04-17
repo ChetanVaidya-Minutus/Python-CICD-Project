@@ -1,5 +1,6 @@
 provider "aws" {
    region = var.region
+   tfe_token = "kX9QNgkQZQZN9w.atlasv1.ryZpapzyEj1niFb9W5Vd3WYN3jPqzlYhqfpCSjjRmyQPWYvk5Sbth4ckIvX3BGByLms"
 }
 
 from flask import Flask
